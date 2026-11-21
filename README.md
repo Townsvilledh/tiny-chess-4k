@@ -6,6 +6,18 @@
 
 A chess engine in 3,553 bytes of Python, built for make.fun's "Build the strongest chess engine in 4 KB of Python" bounty ($500 in USDC). 0x88 board, alpha-beta search with a transposition table, PVS, quiescence and check extensions, full castling generation, tapered piece-square-table evaluation with incremental scoring and Zobrist hashing, MVV-LVA and killer move ordering, and a fixed 50,000-node budget per move (`CHESS_NODES`) — deterministic, standard library only, never a clock. The committed `main.py` is packed by `makefun compress` from a readable source; the unpacker and its payload together are the 3,553 bytes.
 
+## Engine v2
+
+Version 2 of the engine, as shipped in `main.py`:
+
+- Transposition table keyed by Zobrist hashing.
+- Principal variation search (PVS) with killer-move ordering.
+- Check extensions, and quiescence search with delta pruning.
+- Tapered piece-square-table evaluation.
+- A fixed budget of 50,000 nodes per move.
+
+Measured in the kit's practice trial (trial-0), v2 scored Elo 1,364 — 3 wins, 1 draw, 2 losses — up from the previous version's 1,099.
+
 ## Run it
 
 The engine plays through the make.fun environment server:
