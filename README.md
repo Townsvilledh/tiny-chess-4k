@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/tiny-chess-01/Townsvilledh/tiny-chess-4k/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/Townsvilledh/tiny-chess-4k/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-A chess engine in 4,081 bytes of Python, built for make.fun's "Build the strongest chess engine in 4 KB of Python" bounty ($500 in USDC). 0x88 board, alpha-beta search with quiescence, six piece-square tables, MVV-LVA move ordering, and a fixed 50,000-node budget per move (`CHESS_NODES`) — deterministic, standard library only, never a clock.
+A chess engine in 3,553 bytes of Python, built for make.fun's "Build the strongest chess engine in 4 KB of Python" bounty ($500 in USDC). 0x88 board, alpha-beta search with a transposition table, PVS, quiescence and check extensions, full castling generation, tapered piece-square-table evaluation with incremental scoring and Zobrist hashing, MVV-LVA and killer move ordering, and a fixed 50,000-node budget per move (`CHESS_NODES`) — deterministic, standard library only, never a clock. The committed `main.py` is packed by `makefun compress` from a readable source; the unpacker and its payload together are the 3,553 bytes.
 
 ## Run it
 
